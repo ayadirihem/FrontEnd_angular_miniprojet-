@@ -3,14 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MedicamentsComponent } from './medicaments/medicaments.component';
+import { AddMedicamentComponent } from './add-medicament/add-medicament.component';
+import { FormsModule } from '@angular/forms';
+import { UpdateMedicamentComponent } from './update-medicament/update-medicament.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MedicamentsComponent,
+    AddMedicamentComponent,
+    UpdateMedicamentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

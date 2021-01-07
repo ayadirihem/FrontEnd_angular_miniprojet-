@@ -1,0 +1,30 @@
+<div class="container"> 
+    <div> 
+        <br />
+        <h2 style="font-family: 'Courier New', Courier, monospace;">Ajouter un Medicament :</h2> 
+        <hr />
+    </div>
+    <form > 
+        <div class="col-sm-4 col-md-4 col-lg-8" > 
+            <label >Nom Medicament</label> 
+            <input type="text"[(ngModel)]= "newMedicament.nomMedicament" name="nomMedicament" class="form-control"> 
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-8"> 
+            <label >Prix Medicament</label> 
+            <input type="number" [(ngModel)]= "newMedicament.prixMedicament" name="prixMedicament" class="form-control"> 
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-8"> 
+            <label >Quantite Medicament</label> 
+            <input type="number" [(ngModel)]= "newMedicament.qteMedicament" name="qteMedicament" class="form-control"> 
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-8"> 
+            <label >Date création</label> 
+            <input type="date" [(ngModel)]= "newMedicament.dateCreation" name="dateCreation" class="form-control"> 
+        </div>
+        <div class="mt-2"> 
+            <hr>
+            <button type="submit" (click)="addMedicament()" class="btn btn-success btn-lg">Ajouter</button> 
+            <button type="button" routerLink="/medicaments" class="btn btn-secondary btn-lg" style="margin-left: 50px;">Cancel</button>
+        </div> 
+    </form> 
+</div>

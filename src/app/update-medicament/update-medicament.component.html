@@ -1,0 +1,32 @@
+<div class="container"> 
+    <div> 
+        <br />
+        <h2 style="font-family: 'Courier New', Courier, monospace;">Modifier un Medicament :</h2> 
+        <hr>
+    </div> 
+    <form > 
+        <div hidden class="col-sm-2 col-md-2 col-lg-2"> 
+            <label >ID Medicament</label> 
+            <input readonly type="text" [(ngModel)]="currentMedicament.idMedicament" name="idMedicament" class="form-control"> 
+        </div> 
+        <div class="col-sm-4 col-md-4 col-lg-4" > 
+            <label >Nom Medicament</label> 
+            <input type="text"[(ngModel)]= "currentMedicament.nomMedicament" name="nomMedicament" class="form-control"> 
+        </div> 
+        <div class="col-sm-2 col-md-2 col-lg-2"> 
+            <label >Prix Medicament</label> 
+            <input type="number" [(ngModel)]= "currentMedicament.prixMedicament" name="prixMedicament" class="form-control"> 
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2"> 
+            <label >Quantite Medicament</label> 
+            <input type="number" [(ngModel)]= "currentMedicament.qteMedicament" name="qteMedicament" class="form-control"> 
+        </div> 
+        <div class="col-sm-4 col-md-4 col-lg-4"> 
+            <label >Date création</label> 
+            <input type="date" [ngModel]="currentMedicament.dateCreation | date: 'yyyy-MM-dd' "(ngModelChange)=" currentMedicament.dateCreation= $event" name="dateCreation" class="form-control"> 
+        </div> <div class="mt-2"> 
+            <button type="submit" (click)="updateMedicament()" class="btn btn-success">Modifer</button> 
+            <button type="button" routerLink="/medicaments" class="btn btn-secondary btn-lg" style="margin-left: 50px;">Cancel</button>
+        </div> 
+    </form> 
+</div>
